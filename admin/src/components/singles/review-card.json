@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_singles_review_cards",
+  "info": {
+    "displayName": "ReviewCard"
+  },
+  "options": {},
+  "attributes": {
+    "stars": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

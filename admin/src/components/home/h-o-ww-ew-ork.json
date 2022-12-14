@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_h_o_ww_ew_orks",
+  "info": {
+    "displayName": "HowWeWork",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "singles.service-area-list"
+    }
+  }
+}

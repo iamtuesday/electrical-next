@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_characteristic_lists",
+  "info": {
+    "displayName": "CharacteristicList"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

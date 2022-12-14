@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_home_projects",
+  "info": {
+    "displayName": "HomeProjects",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "content": {
+      "type": "text"
+    },
+    "items": {
+      "displayName": "Gallery",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.gallery"
+    }
+  }
+}

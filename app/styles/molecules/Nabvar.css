@@ -1,0 +1,139 @@
+.Navbar {
+  padding-top: 1.3rem;
+  padding-bottom: 5.2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  @apply bg-[#247FFB] fixed top-0 right-0 left-0;
+
+  @media screen(laptop) {
+    @apply static inset-auto p-0 transform-none rounded-none h-full bg-transparent;
+  }
+
+  &.isActive {
+    transform: translateY(0);
+  }
+
+  &-container {
+    margin-right: 6.3rem;
+    @apply flex justify-between ml-12;
+  }
+
+  &-logo {
+    width: 11rem;
+
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  .socials {
+    font-size: 2rem;
+    margin-top: 0.9rem;
+    @apply flex text-white gap-4;
+
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  &-ul {
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    @apply font-light  font-mulish text-white flex flex-col;
+
+    @media screen(laptop) {
+       @apply flex flex-row m-0 font-semibold font-mulish mx-auto  text-[#616161] h-full  cursor-pointer items-center justify-end;
+       font-size: calc(1.9rem * var(--scale));
+       gap: calc(4rem * var(--scale));
+       width: 76.5%;
+       max-width: 150.2rem;
+
+       .Navbar-li{
+        &::after{
+          transition: all ease-in-out .3s;
+          content: '';
+          width: 6.6rem;
+          height: 0.8rem;
+          opacity: 0;
+          border-radius: 5px 5px 0px 0px;
+          @apply absolute  bg-[#0000B4];
+          bottom: calc(-3.5rem * var(--scale));
+        } 
+        transform: all ease-in-out .2s;
+        &:hover{
+          &::after{
+          @apply  opacity-100;
+          }
+        }
+
+        &:last-child{
+          &:hover::after{
+            @apply hidden ;
+          }
+        }
+      }
+    }
+ }
+
+
+  &-li {
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    padding: 0.2rem 0;
+    @apply px-12;
+
+    &.isActive {
+      @apply font-semibold;
+    }
+
+    @media screen(laptop) {
+      transition: all 0.3s ease;
+      @apply border-none p-0 relative isolate flex justify-center;
+
+      &:hover,
+      &.isActive {
+        &::after{
+          content: '';
+          width: calc(6.6rem * var(--scale));
+          height: calc(.8rem * var(--scale));
+          border-radius: 5px 5px 0px 0px;
+          @apply absolute  bg-[#0000B4];
+          bottom: calc(-3.5rem * var(--scale));
+        }
+      }
+    }
+
+    &:last-child {
+      &:hover,
+      &.isActive {
+        &::after{
+          @apply  bg-transparent;
+        }
+      }
+
+    }
+  }
+
+  &-contact {
+    &.active{
+      @apply font-semibold; 
+    }
+    @media screen(laptop){
+      transition: all ease-in 0.4s;
+    @apply bg-primary font-roboto text-[1.8rem] tracking-[0.05em] text-white rounded-[4rem] px-[3rem] py-[1rem];
+    padding: calc(1.25rem * var(--scale)) calc(3.5rem * var(--scale));
+    font-size: calc(1.8rem * var(--scale));
+    &.active{
+        @apply bg-secondary  text-white ;
+    }
+
+
+    &:hover {
+      @apply bg-secondary text-white;
+    }
+    }
+
+    
+  }
+
+} 

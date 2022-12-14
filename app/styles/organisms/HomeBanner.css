@@ -1,0 +1,143 @@
+.HomeBanner{
+    @apply relative isolate;
+    &-slide{
+        @apply w-full pt-[11.3rem] px-[2.4rem];
+        background-image: var(--bg-mobile); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 57.7rem;
+        &::before {
+            content: "";
+            background: linear-gradient(60.89deg, 
+            rgba(36, 36, 36, 0.9) 14.47%, 
+            rgba(86, 86, 86, 0.9) 53.34%, 
+            rgba(86, 86, 86, 0) 99.22%);
+            mix-blend-mode: multiply;
+            @apply absolute inset-0 ;
+            transform: rotate(-360deg);
+        }
+
+        @media screen(tablet){
+            min-height: 47.7rem;
+        }
+        @media screen(laptop){
+            @apply p-0;
+            background-image: var(--bg-desktop); 
+            height: calc(80rem * var(--scale));
+            &::before {
+                content: "";
+                background: linear-gradient(90deg, #1E1E1E 8.69%, #525252 43.07%, rgba(82, 82, 82, 0) 58.88%);
+                mix-blend-mode: multiply;
+                @apply absolute inset-0 opacity-75;
+                transform: rotate(0);
+            }
+      }
+
+    }
+
+    &-bg{
+        @apply hidden;
+        @media screen(laptop) {
+            @apply block absolute top-0 right-0;
+            width: calc(38.5rem * var(--scale));
+            height: calc(80rem * var(--scale));
+            /* background: #00007F; */
+            mix-blend-mode: hard-light;
+        }
+       
+    }
+
+    &-content{
+        @apply relative ;
+        @media screen(laptop) {
+            @apply absolute;
+            left: calc(20rem * var(--scale));
+            top: calc(18.7rem * var(--scale));
+        }
+    }
+
+    &-h3{
+        @apply text-white font-mulish text-[1.5rem] leading-[1] ;
+        @media screen(laptop) {
+            font-size: calc(1.9rem * var(--scale));
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+        }
+    }
+   
+    &-h2{
+        @apply font-black font-mulish leading-[122%] text-white text-[3.7rem] mt-[0.5];
+        @screen laptop {
+           font-size: calc(6rem * var(--scale));
+           margin-top: calc(0.2rem * var(--scale));
+           width: calc(74rem * var(--scale));
+        }
+    }
+
+    &-p{
+        @apply text-white font-normal font-mulish text-[1.41rem] leading-[165%] mt-[2rem];
+        @screen tablet {
+           @apply w-[67%];
+        }
+        @screen laptop {
+           width: calc(70rem * var(--scale));
+           font-size: calc(1.9rem * var(--scale));
+           margin-top: calc(1.65rem * var(--scale));
+        }
+    }
+
+    &-btns {
+        @apply  flex flex-col gap-[2rem] mt-[2rem];
+        @screen tablet {
+           @apply flex flex-row;
+        }
+        @screen laptop {
+           @apply flex flex-row;
+           gap: calc(3rem * var(--scale));
+           margin-top: calc(4rem * var(--scale));
+        }
+     }
+     &-btn{
+        @apply inline-block;
+     }
+
+     &-info{
+      @apply hidden;
+      @media screen(laptop){
+        @apply block;
+        @apply  flex absolute z-[5] items-center;
+        gap: calc(3rem * var(--scale));
+        bottom: calc(5.8rem * var(--scale));
+        right: calc(8.9rem * var(--scale)); 
+        &-call{
+            background: rgba(232, 232, 232, 0.75);
+            @apply  rounded-full flex items-center justify-center;
+            width: calc(10.3rem * var(--scale));
+            height: calc(10.3rem * var(--scale));
+        }
+
+        &-phone{
+            @apply bg-white rounded-full flex items-center justify-center;
+            width: calc(7.8rem * var(--scale));
+            height: calc(7.8rem * var(--scale));
+
+            img{
+                width: calc(4rem * var(--scale));
+            }
+        }
+        &-info{
+            @apply flex flex-col gap-[1rem];
+        }
+        &-h3{
+            @apply text-white font-jost font-semibold leading-[120%];
+            font-size: calc(2.1rem * var(--scale));
+        }
+        &-p{
+            @apply text-white font-jost font-semibold leading-[80%];
+            font-size: calc(3rem * var(--scale));
+        }
+      }
+
+     }
+    
+}

@@ -1,0 +1,96 @@
+.HowReviews{
+    @apply w-full pt-[4.8rem] px-[2.4rem]   relative isolate;
+    background-image: var(--bg-mobile); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 57.7rem;
+    &::before {
+        content: "";
+        background: #000000;
+        mix-blend-mode: normal;
+        @apply absolute inset-0 opacity-60;
+    } 
+
+    @media screen(tablet){
+        min-height: 47.7rem;
+    }
+    @media screen(laptop){
+        background-image: var(--bg-desktop); 
+        height: calc(81rem * var(--scale));
+        padding: calc(9rem * var(--scale)) calc(34.5rem * var(--scale));
+         &::before {
+            content: "";
+            background: #000000;
+            mix-blend-mode: normal;
+            @apply absolute inset-0 opacity-60;
+        } 
+    }
+
+    &-heading{
+        @apply text-center z-[5] relative;
+        /* @media screen(laptop){
+            @apply text-center z-[5] relative;
+        } */
+    }
+
+    &-swiperContainer{
+        @apply mt-[3rem] relative isolate;
+        @media screen(laptop){
+            margin-top: calc(7.7rem * var(--scale)); 
+        }
+    }
+
+    &-Quote{
+        @apply hidden;
+        @media screen(laptop){
+            @apply absolute left-0 block;
+            top: calc(11rem * var(--scale));
+            left: calc(35.9rem * var(--scale));
+            width: calc(13.2rem * var(--scale));
+        }
+    }
+
+    &-Quote2{
+        @apply hidden;
+       @media screen(laptop){
+        @apply absolute block;
+        right: calc(35.9rem * var(--scale));
+        top: calc(11rem * var(--scale));
+        transform: rotate(-180deg);
+        width: calc(13.2rem * var(--scale));
+       }
+    }
+
+    &-Pagination {
+        @apply flex justify-center gap-4 absolute bottom-[-15%] left-[46%];
+        @media screen(tabletxl) {
+          @apply hidden;
+        }
+        .swiper-pagination-bullet {
+          transition: background-color 0.3s ease;
+          background: rgba(255, 255, 255, 0.5);
+          @apply rounded-full w-4 h-4  ;
+    
+          &-active {
+            @apply bg-white;
+          }
+        }
+    }
+
+    &-navigation{
+       @apply absolute bg-[#D2E6FF] w-[2.9rem] h-[2.9rem] rounded-full flex items-center justify-center z-[5] top-[35%] text-primary text-[1.2rem];
+       @media screen(laptop){
+        @apply hidden;
+     }
+    }
+
+    &-next{
+        @apply right-0;
+    }
+
+    &-prev{
+        @apply  left-0;
+    }
+    
+}

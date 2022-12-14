@@ -1,0 +1,44 @@
+.HomeCharacteristic{
+    @apply bg-primary relative;
+    @media screen(laptop) {
+        padding: calc(9rem * var(--scale)) calc(26rem * var(--scale));
+    }
+
+    &-Slide{
+        @apply pb-[10rem] p-[5rem];
+       @media screen(laptop){
+        @apply p-0;
+       }
+    }
+
+    &-h2{
+        @apply font-mulish font-extrabold leading-[122%] text-white text-center text-[6rem];
+        @media screen(laptop){
+            font-size: calc(6rem * var(--scale));
+        } 
+    }
+     &-h3{
+        @apply font-mulish font-bold leading-[150%] text-white text-center text-[2.3rem];
+        @media screen(laptop){
+            font-size: calc(2.5rem * var(--scale));
+            padding-top: calc(0.5rem * var(--scale));
+        } 
+    }
+
+    &-Pagination {
+        @apply flex justify-center gap-4 absolute bottom-[15%] left-[41%];
+        @media screen(tabletxl) {
+          @apply hidden;
+        }
+    
+        .swiper-pagination-bullet {
+          transition: background-color 0.3s ease;
+          background: rgba(255, 255, 255, 0.5);
+          @apply rounded-full w-4 h-4  ;
+    
+          &-active {
+            @apply bg-white;
+          }
+        }
+      }
+}

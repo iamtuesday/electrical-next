@@ -1,0 +1,110 @@
+.Header {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
+  @apply bg-white h-[7rem] sticky top-0 z-20;
+
+  @media screen(laptop) {
+    @apply bg-white text-[#252525];
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    height: calc(9.8rem * var(--scale));
+    top: 0px;
+  }
+
+  &.active{
+    @media screen(laptop) {
+      @apply bg-white;
+
+      .Navbar-ul{
+        @apply text-[#787878] font-semibold ;
+      }
+
+      .Navbar-li {
+        &::after{
+          transition: all ease-in-out .3s;
+          content: '';
+          width: calc(6.6rem * var(--scale));
+          height: calc(.8rem * var(--scale));
+          opacity: 0;
+          border-radius: 5px 5px 0px 0px;
+          @apply absolute  bg-[#0000B4];
+          bottom: calc(-3.5rem * var(--scale));
+        }
+        
+       &:hover, 
+       &.isActive{
+        @apply relative isolate;
+        &::after{
+          @apply opacity-100;
+        }
+       }
+
+       &:last-child{
+        &:hover::after{
+          @apply  bg-primary ;
+        } 
+
+        .Navbar-a{
+          @apply text-white;
+          &:hover{
+            @apply text-white;
+          }
+        }
+      }
+      }
+
+      .Navbar-a{
+        @apply text-[#787878];
+      }
+
+      
+    }
+
+  }
+
+  &-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @apply fixed inset-0 bg-black/70 pointer-events-none w-screen h-screen;
+
+    @media screen(laptop) {
+      @apply hidden;
+    }
+
+    &.isActive {
+      opacity: 1;
+      @apply pointer-events-auto;
+    }
+  }
+
+  &-logo {
+    width: 12.5rem;
+    @apply left-8 fixed top-4;
+
+    @media screen(laptop) {
+      width: calc(20rem * var(--scale));
+      left: 9.7vw;
+      top: calc(1.3rem * var(--scale));
+      @apply fixed;
+    }
+  }
+
+  > .socials {
+    top: 1.8rem;
+    font-size: 2rem;
+    @apply flex gap-4 text-[#247FFB] fixed right-28;
+
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  &-menuIcon {
+    /* top: 1.2rem; */
+    transition: transform 0.3s ease;
+    @apply fixed right-0 z-10;
+
+    &.isActive {
+      top: 1.6rem;
+      transform: translate(-1.7rem, 0.5rem);
+    }
+  }
+}

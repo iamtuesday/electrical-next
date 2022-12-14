@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "messages": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.messages"
+    },
+    "submit": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.submit-form"
+    },
+    "name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.input-form"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.input-form"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.input-form"
+    },
+    "service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.input-form"
+    },
+    "message": {
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.input-form"
+    },
+    "info": {
+      "displayName": "ContactInfo",
+      "type": "component",
+      "repeatable": false,
+      "component": "singles.contact-info"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

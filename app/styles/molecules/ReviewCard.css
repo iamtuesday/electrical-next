@@ -1,0 +1,56 @@
+.ReviewCard {
+  @apply bg-white rounded-[1rem] relative isolate px-[1.5rem] py-[2.5rem] mb-[5rem] min-h-[27rem] mx-[1.5rem];
+  @media screen(laptop){
+    @apply mx-0;
+    width: calc(54.6rem * var(--scale));
+    height: calc(35.9rem * var(--scale));
+    padding: calc(6.2rem * var(--scale)); 
+    margin-bottom: calc(7rem * var(--scale));
+  }
+  &-content{
+    @apply flex flex-col gap-[1.5rem];;
+    @media screen(laptop){
+      gap: calc(1.4rem * var(--scale));
+    }
+  }
+
+  &-stars{
+    @apply mx-auto;
+    @media screen(laptop) {
+      margin-bottom: calc(1.9rem * var(--scale));
+    }
+
+  }
+
+  &-p {
+    @apply font-mulish  font-light text-[1.5rem]  text-[#606060] leading-[170%] text-center py-[1rem];
+    @media screen(laptop) {
+      @apply py-0;
+      font-size: calc(1.9rem * var(--scale));
+    }
+
+  }
+
+  &-h3 {
+    @apply font-mulish   font-extrabold text-[1.5rem] text-[#606060] text-center;
+    @media screen(laptop) {
+      font-size: calc(2.3rem * var(--scale));
+    }
+  }
+
+  &-picture {
+    @apply absolute rounded-full block isolate overflow-visible w-[8.2rem] h-[8.2rem] left-[38%];
+    bottom: -5rem;
+    img{
+      @apply rounded-full w-full h-full;
+    }
+
+    @media screen(laptop) {
+      left: [41%];
+      width: calc(11.1rem * var(--scale));
+      height: calc(11.1rem * var(--scale));
+      }
+    
+  }
+ 
+}

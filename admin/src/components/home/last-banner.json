@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_home_last_banners",
+  "info": {
+    "displayName": "LastBanner"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    }
+  }
+}

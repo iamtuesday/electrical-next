@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_characteristics",
+  "info": {
+    "displayName": "Characteristic",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    }
+  }
+}

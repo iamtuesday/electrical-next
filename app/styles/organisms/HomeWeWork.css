@@ -1,0 +1,92 @@
+.HomeWeWork{
+    @apply pt-[6.1rem] px-[2.3rem] pb-[6.2rem];
+    @media screen(laptop){
+        padding: calc(10rem * var(--scale)) calc(26rem * var(--scale));
+    }
+
+    &-titles{
+        @apply text-center mb-[6rem];
+        @media screen(laptop){
+           @apply mb-0 ;
+         }
+    }
+
+    &-Content{
+        @apply flex flex-col gap-[5rem] px-[2.5rem];
+        @media screen(laptop){
+           @apply grid grid-cols-3 px-0;
+           gap: calc(16rem * var(--scale));
+        }
+    }
+
+    
+    &-CardWork{       
+        &-Top{
+            @apply flex flex-col items-center justify-center gap-[0.5rem];
+        }
+
+        &-Icon {
+           @apply w-[7.7rem] h-[7.7rem] rounded-full p-[1.5rem] relative isolate;
+           border: 0.27rem solid #0000B4;
+           img {
+              @apply w-full h-full;
+           }
+           span {
+              @apply bg-secondary absolute top-[-.7rem] right-[-.7rem] w-[2.85rem] h-[2.85rem] flex items-center justify-center rounded-full font-mulish text-white;
+           }
+        }
+        &-h2 {
+           @apply font-mulish font-extrabold text-[1.6rem] leading-[137%] text-primary;
+        }
+        &-p {
+           @apply font-roboto font-light text-[1.5rem] leading-[160%] text-[#606060] text-center;
+           @media screen(tablet) {
+            @apply w-[60%];
+           }
+        }
+        &-Bottom{
+            @apply hidden;
+        }
+
+        @media screen(laptop) {
+            @apply relative;
+            margin-top: calc(9.7rem * var(--scale));
+            &-Top{
+                @apply flex flex-col items-center justify-center;
+                gap: calc(1rem * var(--scale));
+            }
+
+            &-Icon {
+               width: calc(9.5rem * var(--scale));
+               height: calc(9.5rem * var(--scale));
+               padding: calc(1.7rem * var(--scale));
+               border: calc(0.35rem * var(--scale)) solid #0000B4;
+               span {
+                  width: calc(3.5rem * var(--scale));
+                  height: calc(3.5rem * var(--scale));
+               }
+            }
+            &-h2 {
+               font-size: calc(2.3rem * var(--scale));
+            }
+            &-p {
+                @apply w-full;
+               font-size: calc(1.9rem * var(--scale));
+            }
+            &-Bottom{
+                @apply absolute block;
+                right: calc(-24rem * var(--scale));
+                top: calc(2.5rem * var(--scale));
+                img{
+                    width: calc(32rem * var(--scale));
+                }
+            }
+        }
+
+        &:last-child{
+            .HomeWeWork-CardWork-Bottom{
+                @apply hidden;
+            }
+        }
+    }
+}

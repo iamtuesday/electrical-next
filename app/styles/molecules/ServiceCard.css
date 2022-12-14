@@ -1,0 +1,97 @@
+.ServiceCard {
+    transition: all ease-in-out 0.6s;
+    @apply bg-white rounded-[0.78rem]  relative flex flex-col gap-[2.9rem] h-full max-w-[37rem] mx-auto cursor-pointer;
+    box-shadow: 0px 0px 7.82709px rgba(0, 0, 0, 0.3);
+    &-img {
+       transition: all ease-in-out 0.4s;
+       @apply h-[17rem];
+       img {
+          @apply w-full h-full;
+       }
+    }
+    &-icon {
+       transition: background-color ease-out 0.6s;
+       @apply absolute top-[13.3rem] right-[2.2rem] bg-secondary  w-[7.4rem] h-[7.4rem] p-[1.5rem] rounded-full flex items-center justify-center;
+       img {
+          @apply w-full h-full;
+       }
+    }
+    
+    &-info {
+       @apply px-[2.4rem] pb-[3rem] flex flex-col gap-[4.3rem];
+    }
+    &-middle {
+       @apply flex flex-col gap-[1rem];
+    }
+    &-title {
+       transition: all ease-in-out 0.5s;
+       @apply font-mulish text-content leading-[122%] text-[1.8rem] font-extrabold;
+    }
+    &-content {
+       @apply font-roboto text-content leading-[160%] text-[1.5rem] font-light;
+    }
+    &-btn {
+       @apply block;
+    }
+ 
+    @screen tablet {
+       &-img {
+          @apply h-[20rem];
+       }
+       &-info {
+          height: calc(100% - 20rem);
+          @apply grid grid-rows-[75%_25%] gap-[2rem] pb-[4rem];
+       }
+       &-icon {
+          @apply top-[14.5rem];
+       }
+    }
+    @screen laptop {
+       @apply max-w-full rounded-[1rem];
+       height: calc(55.3rem * var(--scale));
+       gap: calc(3.8rem * var(--scale));
+       &-img {
+          height: calc(22.4rem * var(--scale));
+          img {
+             border-radius: 10px 10px 0px 0px;
+          }
+       }
+       &-icon {
+          width: calc(9.5rem * var(--scale));
+          height: calc(9.5rem * var(--scale));
+          top: calc(17.6rem * var(--scale));
+          right: calc(3.5rem * var(--scale));
+          padding: calc(1.8rem * var(--scale));
+       }
+       &-info {
+          @apply gap-0 grid-rows-[80%_20%];
+          height: calc(32.9rem * var(--scale));
+          padding: 0 calc(3.9rem * var(--scale));
+          padding-bottom: calc(3.3rem * var(--scale));
+       }
+       &-title {
+          font-size: calc(2.3rem * var(--scale));
+       }
+       &-content {
+          font-size: calc(1.9rem * var(--scale));
+       }
+ 
+       @media (hover: hover) {
+          &:hover {
+             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+             .ServiceCard-icon {
+                @apply bg-ocean-100;
+             }
+             .ServiceCard-btn .btn-light {
+                @apply bg-ocean-100 text-white;
+             }
+             .ServiceCard-img {
+                transform: translateY(-5%);
+             }
+             .ServiceCard-title {
+                @apply text-ocean-100;
+             }
+          }
+       }
+    }
+ }

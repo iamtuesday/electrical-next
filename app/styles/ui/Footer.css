@@ -1,0 +1,89 @@
+.Footer {
+  @apply bg-[#001F49];
+  @media screen(laptop){
+    @apply flex flex-col;
+  }
+
+  &-Content{
+    @apply px-[2.4rem] pt-[4.2rem] pb-[3.2rem];
+    @media screen(laptop){
+      @apply flex justify-between;
+      padding: calc(4.7rem * var(--scale)) calc(20rem * var(--scale));
+      padding-bottom: calc(3.6rem * var(--scale));
+      gap: calc(17rem * var(--scale));
+    }
+  }
+  &-Logo{
+    @apply w-[14.2rem];
+    @media screen(laptop){
+      width: calc(19.5rem * var(--scale));
+      height: calc(10.5rem * var(--scale));
+      /* margin-top: calc(-2.5rem * var(--scale)); */
+    }
+  }
+
+  &-ul{
+    @apply flex flex-col gap-[2rem] mt-[3.2rem];
+    @media screen(tablet){
+      @apply flex-row gap-[8rem];
+    }
+    @media screen(laptop){
+      @apply flex-row p-0;
+      gap: calc(11.5rem * var(--scale));
+    }
+  }
+
+  &-li{
+    @apply text-white flex flex-col gap-[1rem];
+    @media screen(laptop){
+      gap: calc(1.5rem * var(--scale));
+    }
+  }
+
+  &-label{
+    @apply font-roboto font-bold leading-[76%] uppercase text-[1.37rem];
+    @media screen(laptop){
+      font-size: calc(1.5rem * var(--scale));
+    }
+  }
+
+  &-a{
+    @apply font-roboto font-normal leading-[150%] text-[1.5rem];
+    @media screen(laptop){
+    font-size: calc(1.8rem * var(--scale));
+    }
+  }
+
+  &-Socials{
+    @apply  pt-[2rem] flex flex-col gap-[1rem];
+    @media screen(laptop){
+      gap: calc(1.5rem * var(--scale));
+    }
+  }
+
+  &-lblFollow{
+    @apply text-white  font-roboto font-bold leading-[76%] uppercase text-[1.37rem];
+    @media screen(laptop){
+      font-size: calc(1.5rem * var(--scale));
+    }
+  }
+
+  &-socials{
+    @apply flex text-white gap-[1rem] text-[1.8rem];
+    @media screen(laptop){
+      gap: calc(1.5rem * var(--scale));
+      font-size: calc(2rem * var(--scale));
+    }
+  }
+
+  &-Copyright{
+    @apply text-white text-center font-roboto font-normal leading-[1] py-[2rem] text-[1.5rem];
+    border-top: 1px solid #fff;
+    @media screen(laptop){
+      font-size: calc(1.5rem * var(--scale));
+      padding: calc(2rem * var(--scale)) 0;
+    }
+  }
+}
+  
+

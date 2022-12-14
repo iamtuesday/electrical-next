@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_home_service_areas",
+  "info": {
+    "displayName": "ServiceArea",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bg_mob": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "displayName": "ServiceAreaList",
+      "type": "component",
+      "repeatable": true,
+      "component": "singles.service-area-list"
+    },
+    "map": {
+      "type": "richtext"
+    }
+  }
+}

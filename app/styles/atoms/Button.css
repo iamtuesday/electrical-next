@@ -1,0 +1,55 @@
+
+.btn {
+  &-default {
+    @apply rounded-[.5rem] px-[2rem] py-[1.5rem] relative isolate font-dmsans leading-[170%] text-white  uppercase font-bold text-[1.5rem];
+    letter-spacing: 0.02em;
+
+    &::before {
+      content: "";
+      @apply absolute inset-0 bg-[#F79B11] rounded-[0.5rem] z-[-1];
+   }
+   &::after {
+      transition: all 0.8s ease-out;
+      content: "";
+      background: linear-gradient(180deg, #F7C411 0%, #F7AD11 44.27%, #F79B11 100%);
+      @apply absolute inset-0 rounded-[0.5rem] opacity-0 z-[-1];
+   }
+
+   &:hover::after {
+    @apply opacity-100;
+   }
+
+   @screen laptop {
+    font-size: calc(1.7rem * var(--scale));
+    padding: calc(1.6rem * var(--scale)) calc(2.5rem * var(--scale));
+     
+   }
+   
+   
+   .icon-arrow {
+    @apply text-[.8rem] ml-[1.5rem] text-white;
+    @screen laptop {
+       font-size: calc(.8rem * var(--scale));
+    } 
+    }
+   }
+
+  &-light {
+   transition: all 0.5s ease-out;
+   @apply flex items-center bg-primary  rounded-[5rem]  text-white  font-mulish font-bold text-[1.5rem] leading-[1] px-[3rem] py-[1.15rem];
+   @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+      padding: calc(1.5rem * var(--scale)) calc(4rem * var(--scale));
+   }
+   @media (hover: hover) {
+      &:hover {
+         @apply bg-secondary rounded-[5rem] text-white;
+      }
+   }
+   .icon-arrow-slider {
+      @apply hidden;
+   }
+  }
+
+
+}

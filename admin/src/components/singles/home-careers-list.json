@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_singles_home_careers_lists",
+  "info": {
+    "displayName": "HomeCareersList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

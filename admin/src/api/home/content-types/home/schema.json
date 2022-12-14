@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner_prin": {
+      "displayName": "Banner",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.banner"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.service-home"
+    },
+    "service_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "singles.service-list"
+    },
+    "characteristics": {
+      "displayName": "Characteristic",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.characteristic"
+    },
+    "about": {
+      "displayName": "AboutHome",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.about-home"
+    },
+    "review": {
+      "displayName": "HomeReviews",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.home-reviews"
+    },
+    "gallery": {
+      "displayName": "HomeProjects",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.home-projects"
+    },
+    "how_we_work": {
+      "displayName": "hOWwEwORK",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.h-o-ww-ew-ork"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

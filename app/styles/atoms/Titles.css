@@ -1,0 +1,17 @@
+.Titles{
+    &-h3{
+        @apply font-mulish text-[1.5rem] font-semibold leading-[170%] text-primary;
+        @media screen(laptop){
+            font-size: calc(1.9rem * var(--scale));
+        }
+    }
+    &-h2{
+        @apply font-mulish text-[2.5rem] font-extrabold leading-[120%] text-content;
+        @media screen(laptop){
+            font-size: calc(4rem * var(--scale));
+            width: calc(53rem * var(--scale)); 
+        }
+    }
+
+    
+}

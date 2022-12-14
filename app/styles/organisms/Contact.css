@@ -1,0 +1,62 @@
+.Contact{
+    @apply px-[2.2rem] pt-[5.7rem];
+    background: rgba(0, 0, 180, 0.05);
+    @media screen(laptop){
+        padding: calc(10rem * var(--scale)) calc(20rem * var(--scale));
+        @apply grid grid-cols-[34%_66%];
+        gap: calc(10rem * var(--scale));
+    }
+
+    &-Titles{
+        @apply flex flex-col;
+        gap:  calc(2rem * var(--scale));
+    }
+    &-icon{
+        @apply w-[4.1rem] h-[4.1rem] bg-secondary flex items-center justify-center rounded-[.5rem] p-[1.2rem];
+        @media screen(laptop){
+            width: calc(6rem * var(--scale));
+            height: calc(6rem * var(--scale));
+            padding: calc(1.8rem * var(--scale));
+        }
+    }
+
+    &-Text, &-p{
+        @apply font-mulish font-light text-[1.4rem] leading-[170%] text-[#606060];
+        @media screen(laptop){
+            font-size: calc(1.9rem * var(--scale)) ;
+        }
+    }
+
+    &-p{
+        @apply font-medium ;
+    }
+
+   
+    &-ul{
+        @apply flex flex-col gap-[2.2rem];
+       @media screen(laptop){
+        gap: calc(3.2rem * var(--scale));
+        margin-top: calc(2.5rem * var(--scale));
+       }
+    }
+
+    &-li{
+        @apply flex gap-[2rem];
+        @media screen(laptop){
+            gap: calc(2.9rem * var(--scale));
+        }
+    }
+
+    &-h2{
+        @apply font-mulish font-bold text-[1.4rem] leading-[122%] text-[#626262];
+       @media screen(laptop){
+        font-size: calc(2rem * var(--scale));
+       }
+    }
+    &-form{
+        @apply pt-[3.5rem] pb-[5.6rem];
+        @media screen(laptop){
+            padding: calc(5rem * var(--scale)) calc(9rem * var(--scale));
+        }
+    }
+}

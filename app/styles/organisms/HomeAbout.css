@@ -1,0 +1,96 @@
+.HomeAbout{
+    background: rgba(0, 126, 255, 0.05);
+    @media screen(laptop){
+        padding: calc(10rem * var(--scale)) calc(20rem * var(--scale));
+        @apply grid grid-cols-2;
+        gap: calc(6rem * var(--scale));
+    }
+
+    &-Left{
+     @media screen(laptop){
+        @apply grid grid-cols-2;
+        img{
+            @apply rounded-[1rem];
+            width: calc(33.3rem * var(--scale));
+            height: calc(55.8rem * var(--scale));
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+     }
+    };
+    }
+    &-Img, &-ImgTwo{
+        @apply hidden;
+        @media screen(laptop){
+            @apply block;
+        }
+    }
+
+    &-imgMob{
+        @apply mx-auto;
+        @media screen(laptop){
+            @apply hidden;
+        }
+    }
+
+    &-Right{
+        @apply px-[2.2rem] py-[4.7rem] flex flex-col gap-[2rem];
+        @media screen(laptop){
+            @apply justify-center p-0;
+            gap: calc(3rem * var(--scale));
+
+            .Titles-undefined h2{
+                @apply w-full;
+            }
+        }
+    }
+    
+    &-p{
+        @apply font-mulish font-light text-[1.5rem] leading-[170%] text-[#606060];
+        @media screen(laptop){
+            font-size: calc(1.9rem * var(--scale)) ;
+        }
+    }
+
+    &-ul{
+        @apply flex flex-col gap-[2rem];
+      @media screen(laptop){
+        gap: calc(2.1rem * var(--scale));
+      }
+    }
+
+    
+    &-li{
+        @apply grid grid-cols-[22%_78%];
+
+        @media screen(tablet){
+            @apply  grid-cols-[10%_90%];
+          }
+
+        @media screen(laptop){
+          @apply  grid-cols-[10%_90%];
+          gap: calc(2.5rem * var(--scale));
+        }
+
+        &:first-child{
+            .HomeAbout-icon{
+                @apply p-[1.5rem];
+                @media screen(laptop){
+                    padding: calc(2rem * var(--scale));
+                }
+            }
+          }
+
+    }
+
+    &-icon{
+        @apply w-[5.5rem] h-[5.5rem] bg-secondary flex items-center justify-center rounded-[.5rem] p-[1rem];
+        @media screen(laptop){
+            width: calc(7rem * var(--scale));
+            height: calc(7rem * var(--scale));
+            padding: calc(1.5rem * var(--scale));
+        }
+    }
+
+    &-btn a{
+        @apply mt-[1rem] inline-block;
+    }
+}
